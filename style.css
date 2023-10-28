@@ -1,5 +1,7 @@
 body{
     margin: 0;
+    font-family: 'Nunito', sans-serif;
+    
 }
 .dashboard-container{
     height: 100vh;
@@ -17,18 +19,26 @@ body{
 
 
 }
-
+h3{
+    font-size: 12px;
+    padding: 15px 0px;
+}
 .header-content {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 10px 20px; /* Adjust the padding as needed */
+    padding: 10px 20px; 
     align-items: center;
   }
   
   .search-bar {
-    flex: 1; /* Takes up 1/3 of the header */
-    margin-right: 10px; /* Adjust the margin as needed */
+    width: 70%;
+    margin-right: 10px;
+  }
+  .logo-name {
+    display: flex;
+    align-items: center;
+    width: 10%;
   }
   
   .search-input {
@@ -39,7 +49,7 @@ body{
   }
   
   .toggle-button {
-    /* flex: 1; */
+    
     width: 25px;
     height: 25px;
     margin: 10px;
@@ -48,7 +58,7 @@ body{
 
 
 .sidebar{
-    background-color: #1c1f23;
+    background-color: #ffffff;
     grid-area: side;
 
     display: flex;
@@ -57,55 +67,57 @@ body{
 
   .sidebar-top {
     padding: 20px;
-    border-bottom: 1px solid #31353a;
+    border-bottom: 1px solid #fff
   }
   
-  .logo-name {
-    display: flex;
-    align-items: center;
-  }
+  
   
   .logo {
-    width: 30px; /* Adjust the width as needed */
-    height: 30px; /* Adjust the height as needed */
-    margin-right: 10px; /* Adjust the margin as needed */
+    width: 30px;
+    height: 30px; 
+    margin-right: 10px; 
   }
   
-  .name {
-    color: #fff;
+  .company-name {
     font-size: 18px;
   }
   
   .sidebar-content {
     padding: 20px;
-    color: #c2c5ca;
+   
   }
   
   .nav-item {
     margin-bottom: 10px;
   }
   
-  .nav-link {
+  .nav-item img{
+    display: none;
+    
+  }
+
+  .nav-link, .logout-link {
     padding: 8px;
-    border-radius: 5px;
+    border-radius: 20px;
     transition: background-color 0.3s, color 0.3s;
   }
-  
-  .nav-link:hover {
+    .logout-link:hover {
+        background-color: #333;
+        color: #fff;
+      }
+
+   .nav-link:hover {
     background-color: #333;
     color: #fff;
   }
   
   .logo-at-end {
-    margin-top: auto; /* Pushes the logo to the bottom */
+    margin-top: auto; 
   }
 
   .dark-mode{
     text-align: center;
   }
-
-
-
 
 .main{
     background-color: #c2c5ca;
@@ -126,8 +138,164 @@ body{
 .card{
     background-color: #f6f7f9 ;
     border-radius: 10px;
+    padding: 10px;
 }
+  .card-title {
+    font-size: 24px;
+    margin: 5px;
+  }
+  .account-title, .notification-title{
+    font-size: 14px;
+    margin: 0px;
+  }
+  
+  .card-text {
+    display: block;
+    font-size: 16px;
+    color: #555;
+    margin: 5px;
+    padding-bottom:15px;
+    border-bottom: 1px solid #555;
+  }
 
+  .card .account {
+    background-color: #f6f7f9;
+    border-radius: 10px;
+    padding: 15px; 
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .account-info,
+   .noti-info {
+    flex: 1;
+  }
+  
+  .logo-container, .noti-container {
+    display: flex;
+    align-items: center;
+  }
+  .logo-container img{
+    width: 45px;
+    height: 45px;
+  }
+  
+  .logo {
+    width: 30px;
+    height: 30px; 
+    margin-right: 10px; 
+  }
+  
+  .nested-info {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .name,
+  .noti,
+  .status {
+    font-size: 16px;
+    color: #333;
+  }
+  .account-detail, .noti-detail{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #333;
+  }
+
+  
+  .account-details {
+    text-align: right;
+  }
+  .noti{
+    padding: 5px 2px;
+  }
+  
+  .balance, .email, .noti-time ,.noti {
+    font-size: 12px;
+ 
+  }
+
+
+  
+
+body.night-mode {
+    background-color: #1c1f23; 
+    color: #fff; 
+  }
+  
+  body.night-mode .header {
+    background-color: #1a1c1f; 
+  }
+  body.night-mode .table-header {
+    background-color: #1a1c1f; 
+  }
+  body.night-mode .main {
+    background-color: #1a1c1f; 
+  }
+  body.night-mode .sidebar{
+    background-color: #1a1c1f; 
+  }
+  body.night-mode .card{
+    background-color: #31353a;
+    box-shadow: #1a1c1f;
+    border: 1px solid #555; 
+    color: white;
+  }
+  .dashboard-container.night-mode .header {
+    background-color: #1c1f23; 
+  }
+  
+  .dashboard-container.night-mode h3 {
+    color: #fff; 
+  }
+  
+  .dashboard-container.night-mode .search-input {
+    background-color: #31353a; 
+    border: 1px solid #555; 
+    color: #fff; 
+  }
+  
+  .dashboard-container.night-mode .sidebar {
+    background-color: #1c1f23; 
+    color: #c2c5ca; 
+  }
+  
+  .dashboard-container.night-mode .nav-link {
+    background-color: #333;
+    color: #fff;
+  }
+  
+  .dashboard-container.night-mode .main {
+    background-color: #333; 
+    color: #fff; 
+  }
+  body.night-mode .name {
+    color: #fff; 
+  }
+  .dashboard-container .nav-item img {
+    background-color: #fff;
+    
+  }
+
+
+
+
+
+
+
+
+
+
+  .account-text , .notification-text{
+    display: block;
+    font-size: 12px;
+    color: #555;
+    margin: 0px;
+    padding: 0;
+    border-bottom: 1px solid #555;
+  }
+  
 .card:nth-child(1){
     grid-area: c1;
 }
@@ -138,6 +306,127 @@ body{
     grid-area: c3;
 }
 
+.table-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    background-color: #ddd; 
+    border-radius: 8px;
+    margin-top: 15px; 
+    padding: 10px; 
+  }
+  
+  .header-item {
+    text-align: center;
+    padding: 8px;
+  }
+  
+  .checkmark-btn {
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .table-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px; 
+    font-size: 12px;
+    border-bottom:1px solid #333 ;
+  }
+  
+  .item-column {
+    text-align: center;
+    padding-top: 8px;
+  }
+  
+  .item-column:nth-child(1) {
+    flex: 1;
+  }
+  
+  .item-column:nth-child(2) {
+    flex: 7;
+  }
+  
+  .item-column:nth-child(3) {
+    flex: 3;
+    text-align: left;
+  }
+  
+  .item-column:nth-child(4) {
+    flex: 2;
+    text-align: right;
+  }
+  
+  .item-column:nth-child(5) {
+    flex: 7;
+  }
+  
+  .item-column:nth-child(6) {
+    flex: 3;
+    text-align: left;
+  }
+  
+  .item-column:nth-child(7) {
+    flex: 2;
+  } 
+  
+  .logo {
+    width: 30px; 
+    height: 30px; 
+    margin-right: 5px;
+  }
+  
+  .long-text {
+    max-width: 200px; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  
+  .status-btn {
+    background-color: #47db34; 
+    color: #fff;
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .green-btn {
+    background-color: #8fbc8f; 
+    color: #006400; 
+    margin: 2px 4px; 
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 12px;
+  }
+
+  .orange-btn {
+    background-color: #ffa500; 
+    color: #8b4513; 
+    margin: 2px 4px; 
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  
+  .product, .customer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .rating img{
+    width: 50px;
+    height: 50px;
+  }
 
 
 
@@ -175,6 +464,20 @@ body{
     .card:nth-child(3){
         grid-area: c3;
     }
+    .nav-item img{
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        border: 1px solid #333;
+        border-radius: 50%;
+        padding: 5px;
+        margin-left: 10px;
+        transition: transform 0.3s;
+    }
+    .nav-item img:hover {
+        transform: scale(1.05); 
+      }
 
     .dashboard-container{
         grid-template-columns: 120px 1fr ;
@@ -188,7 +491,15 @@ body{
     .dashboard-container .nav-link{
         display: none;
     }
+    .accounts-container{
+        padding: 15px;
+    }
+    .card {
+        font-size: 14px; 
+      }
     
-
+      .logo {
+        display: none; 
+      }
 
 }   
