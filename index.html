@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Admin Dashboard</title>
+  </head>
+  <body>
+    <div class="dashboard-container">
+      <header class="header">
+        <div class="header-content">
+          <div class="search-bar">
+            <input type="text" placeholder="Search..." class="search-input" />
+          </div>
+          <div class="toggle-button">
+            <button id="toggle-mode">Toggle</button>
+          </div>
+        </div>
+      </header>
+
+      <section class="sidebar">
+        <div class="sidebar-top">
+          <!-- Logo and Name -->
+          <div class="logo-name">
+            <img src="./assets/Logo.png" alt="Logo" class="logo" />
+            <span class="name"> Phoneix</span>
+          </div>
+        </div>
+
+        <div class="sidebar-content">
+          <!-- Navigation Links -->
+          <div class="nav-item">
+            <div class="nav-link">Home</div>
+          </div>
+          <div class="nav-apps">
+            <div class="nav-item">
+              <div class="nav-link">E commerce</div>
+            </div>
+            <div class="nav-item">
+              <div class="nav-link">Project Management</div>
+            </div>
+            <div class="nav-item">
+              <div class="nav-link">Chat</div>
+            </div>
+            
+          </div>
+          <!--end of nav apps -->
+
+          <div class="nav-pages">
+          <div class="nav-item">
+            <div class="nav-link">Starter</div>
+          </div>
+          <div class="nav-item">
+            <div class="nav-link">Faq</div>
+          </div>
+          <div class="nav-item">
+            <div class="nav-link">Landing</div>
+          </div>
+          <div class="nav-item">
+            <div class="nav-link">Notification</div>
+          </div>
+        </div> <!--end of nav-pages-->
+
+        <div class="nav-settings">
+            <div class="nav-item">
+              <div class="nav-link">Errors</div>
+            </div>
+            <div class="nav-item">
+              <div class="nav-link">Verticle Sidenav</div>
+            </div>
+          </div> <!--end of nav-settings-->
+          <hr>
+          <div class="nav-item">
+            <div class="nav-link dark-mode">DarkMode</div>
+          </div>
+         
+                
+          <!-- Logo at the very end -->
+          <div class="logo-name">
+            <img src="./assets/logout.png" alt="Logo" class="logo" />
+            <span class="name nav-link"> logout</span>
+          </div>
+        </div>
+      </section>
+
+      <main class="main">
+        <div class="card main-card">
+
+        </div>
+
+        <div class="card">
+
+        </div>
+
+        <div class="card">
+
+        </div>
+        
+      </main>
+    </div>
+  </body>
+  <script src="app.js"></script>
+</html>
