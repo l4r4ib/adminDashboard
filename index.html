@@ -1,104 +1,330 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
     <title>Admin Dashboard</title>
-  </head>
-  <body>
+</head>
+
+<body>
     <div class="dashboard-container">
-      <header class="header">
-        <div class="header-content">
-          <div class="search-bar">
-            <input type="text" placeholder="Search..." class="search-input" />
-          </div>
-          <div class="toggle-button">
-            <button id="toggle-mode">Toggle</button>
-          </div>
-        </div>
-      </header>
-
-      <section class="sidebar">
-        <div class="sidebar-top">
-          <!-- Logo and Name -->
-          <div class="logo-name">
-            <img src="./assets/Logo.png" alt="Logo" class="logo" />
-            <span class="name"> Phoneix</span>
-          </div>
-        </div>
-
-        <div class="sidebar-content">
-          <!-- Navigation Links -->
-          <div class="nav-item">
-            <div class="nav-link">Home</div>
-          </div>
-          <div class="nav-apps">
-            <div class="nav-item">
-              <div class="nav-link">E commerce</div>
-            </div>
-            <div class="nav-item">
-              <div class="nav-link">Project Management</div>
-            </div>
-            <div class="nav-item">
-              <div class="nav-link">Chat</div>
-            </div>
-            
-          </div>
-          <!--end of nav apps -->
-
-          <div class="nav-pages">
-          <div class="nav-item">
-            <div class="nav-link">Starter</div>
-          </div>
-          <div class="nav-item">
-            <div class="nav-link">Faq</div>
-          </div>
-          <div class="nav-item">
-            <div class="nav-link">Landing</div>
-          </div>
-          <div class="nav-item">
-            <div class="nav-link">Notification</div>
-          </div>
-        </div> <!--end of nav-pages-->
-
-        <div class="nav-settings">
-            <div class="nav-item">
-              <div class="nav-link">Errors</div>
-            </div>
-            <div class="nav-item">
-              <div class="nav-link">Verticle Sidenav</div>
-            </div>
-          </div> <!--end of nav-settings-->
-          <hr>
-          <div class="nav-item">
-            <div class="nav-link dark-mode">DarkMode</div>
-          </div>
-         
+        <header class="header">
+            <div class="header-content">
+                <div class="search-bar">
+                    <input type="text" placeholder="Search..." class="search-input" />
+                </div>
+                <div class="logo-name">
+                    <img src="./assets/logout.png" alt="Logo" class="logo" />
+                    <span class="name logout-link"> logout</span>
+                </div>
                 
-          <!-- Logo at the very end -->
-          <div class="logo-name">
-            <img src="./assets/logout.png" alt="Logo" class="logo" />
-            <span class="name nav-link"> logout</span>
-          </div>
+            </div>
+        </header>
+
+        <section class="sidebar">
+            <div class="sidebar-top">
+               
+                <div class="logo-name">
+                    <img src="./assets/phoenix.png" alt="Logo" class="logo" />
+                    <span class="company-name"> Phoneix</span>
+                </div>
+            </div>
+
+            <div class="sidebar-content">
+                <div class="nav-item">
+                    <img src="./assets/home.png" alt="home">
+                    <div class="nav-link">Home</div>                    
+                </div>
+                <div class="nav-apps">
+                    <h3> Apps </h3>
+                    <div class="nav-item">
+                        <img src="./assets/ecommerce.png" alt="ecommerce">
+                        <div class="nav-link">E commerce</div>
+                    </div>
+                    <div class="nav-item">
+                        <img src="./assets/project.png" alt="project">
+                        <div class="nav-link">Project Management</div>
+                    </div>
+                    <div class="nav-item">
+                        <img src="./assets/chat.png" alt="chat">
+                        <div class="nav-link">Chat</div>
+                    </div>
+
+                </div>
+                <!--end of nav apps -->
+
+                <div class="nav-pages">
+                    <h3> Pages </h3>
+                    <div class="nav-item">
+                        <img src="./assets/settings.png" alt="chat">
+                        <div class="nav-link">Starter</div>
+                    </div>
+                    <div class="nav-item">
+                        <img src="./assets/FAQ.png" alt="chat">
+                        <div class="nav-link">FAQs</div>
+                    </div>
+                    <div class="nav-item">
+                        <img src="./assets/landingpage.png" alt="chat">
+                        <div class="nav-link">Landing</div>
+                    </div>
+                    <div class="nav-item">
+                        <img src="./assets/notification.png" alt="chat">
+                        <div class="nav-link">Notification</div>
+                    </div>
+                </div> <!--end of nav-pages-->
+
+                <div class="nav-settings">
+                    <h3> Settings </h3>
+                    <div class="nav-item">
+                        <img src="./assets/error.png" alt="chat">
+                        <div class="nav-link">Errors</div>
+                    </div>
+                    <div class="nav-item">
+                        <img src="./assets/settings.png" alt="chat">
+                        <div class="nav-link">Verticle Sidenav</div>
+                    </div>
+                </div> <!--end of nav-settings-->
+                <hr>
+                <div id="toggleModeButton" class="nav-item">
+                    <img src="./assets/darkmode.png" alt="chat">
+                    <div class="nav-link dark-mode">ToggleMode</div>
+
+                </div>
+                
+            </div>
+        </section>
+
+        <main class="main">
+            <div class="card main-card">
+                <div class="review">
+                    <h2 class="card-title">Latest reviews</h2>
+                    <span class="card-text">Payment received across all channels</span>
+                </div>
+                <div class="table-header">
+                    <div class="header-item"><input type="checkbox" class="check" name="check" />
+                        <label for="check"></label></div>
+                    <div class="header-item">Product</div>
+                    <div class="header-item">Customer</div>
+                    <div class="header-item">Rating</div>
+                    <div class="header-item">Review</div>
+                    <div class="header-item">Status</div>
+                    <div class="header-item">Time</div>
+                </div>
+                <div class="table-item">
+                    <div class="header-item"><input type="checkbox" class="check" name="check" />
+                        <label for="check"></label></div>
+                    <div class="item-column product">
+                      <img src="./assets/fitbit.png" alt="Logo" class="logo" />
+                      <span>Fitbit sense advanced</span>
+                    </div>
+                    <div class="item-column customer">
+                      <img src="./assets/R.png" alt="Logo" class="logo" />
+                      <span>Richard Dawkins</span>
+                    </div>
+                    <div class="item-column rating">
+                      <img src="./assets/5stars.png" alt="Logo" class="logo" />
+                    </div>
+                    <div class="item-column">
+                      <span class="long-text"> This fitbit is fantastic! i was trying.. </span>
+                    </div>
+                    <div class="item-column"><button class="status-btn green-btn">Approved</button></div>
+                    <div class="item-column">
+                      <span>Just Now</span>
+                    </div>
+                </div>
+                <!--first table item ends here-->
+                <div class="table-item">
+                    <div class="header-item"><input type="checkbox" class="check" name="check" />
+                        <label for="check"></label></div>
+                    <div class="item-column product">
+                      <img src="./assets/iphone.png" alt="Logo" class="logo" />
+                      <span>iPhone 13 max 128GB</span>
+                    </div>
+                    <div class="item-column customer">
+                      <img src="./assets/A.png" alt="Logo" class="logo" />
+                      <span>Ashley Garrett</span>
+                    </div>
+                    <div class="item-column rating">
+                      <img src="./assets/2 stars.png" alt="Logo" class="logo" />
+                    </div>
+                    <div class="item-column">
+                      <span class="long-text">the order was delivered ahead of schedule. To..</span>
+                    </div>
+                    <div class="item-column"><button class="status-btn green-btn">Approved</button></div>
+                    <div class="item-column">
+                      <span>Just Now</span>
+                    </div>
+                </div>
+                <!-- second table item ends here-->
+                <div class="table-item">
+                    <div class="header-item"><input type="checkbox" class="check" name="check" />
+                        <label for="check"></label></div>
+                    <div class="item-column product">
+                      <img src="./assets/macbook.png" alt="Logo" class="logo" />
+                      <span>Apple MacBook Pro</span>
+                    </div>
+                    <div class="item-column customer">
+                      <img src="./assets/s.png" alt="Logo" class="logo" />
+                      <span>Stephen Burton</span>
+                    </div>
+                    <div class="item-column rating">
+                      <img src="./assets/5stars.png" alt="Logo" class="logo" />
+                    </div>
+                    <div class="item-column">
+                      <span class="long-text">Its a Mac, afterall. Once you go mac..</span>
+                    </div>
+                    <div class="item-column"><button class="status-btn orange-btn"> pending</button></div>
+                    <div class="item-column">
+                      <span>Nov 09,03:23</span>
+                    </div>
+                </div>
+                <!-- third table item ends here-->
+                <div class="table-item">
+                    <div class="header-item"><input type="checkbox" class="check" name="check" />
+                        <label for="check"></label></div>
+                    <div class="item-column product">
+                      <img src="./assets/imac.png" alt="Logo" class="logo" />
+                      <span>Apple iMac24 "4K</span>
+                    </div>
+                    <div class="item-column customer">
+                      <img src="./assets/e.png" alt="Logo" class="logo" />
+                      <span>Eric McGee</span>
+                    </div>
+                    <div class="item-column rating">
+                      <img src="./assets/4 stars.png" alt="Logo" class="logo" />
+                    </div>
+                    <div class="item-column">
+                      <span class="long-text">It performs exactly as expected. There are..</span>
+                    </div>
+                    <div class="item-column"><button class="status-btn green-btn">Approved</button></div>
+                    <div class="item-column">
+                      <span>Nov 09,01:57</span>
+                    </div>
+                </div>
+                <!-- fourth table item ends here-->
+            </div>
+
+            <div class="card account">
+                <div class="accounts">
+                    <h2 class="account-title">Accounts</h2>
+                    <span class="account-text">View all your accounts</span>
+                </div>
+            <div class="account-detail">
+                <div class="account-info">
+                    
+                    <div class="logo-container accounts-container">
+                      <img src="./assets/visa.png" alt="Logo" class="logo" />
+                      <div class="nested-info">
+                        <span class="name">Visa Debit Card</span>
+                        <span class="email">3210 **** **** 7890</span>
+                      </div>
+                    </div>
+                </div>
+                <div class="account-details">
+                    
+                    <div class="status">$88,000,00</div>
+                    <div class="balance">account blance</div>
+                  </div>
+            </div>
+
+            <div class="account-detail">
+                <div class="account-info">
+                   
+                    <div class="logo-container accounts-container">
+                      <img src="./assets/mastercard.png" alt="Logo" class="logo" />
+                      <div class="nested-info">
+                        <span class="name">Mastercard</span>
+                        <span class="email">8210 **** ***** 4340</span>
+                      </div>
+                    </div>
+                </div>
+                <div class="account-details">
+                    
+                    <div class="status">$64,120,50</div>
+                    <div class="balance">account balance</div>
+                  </div>
+            </div>
         </div>
-      </section>
 
-      <main class="main">
-        <div class="card main-card">
+            <div class="card notifications">
+                <div class="notification">
+                    <h2 class="notification-title"> Notifications</h2>
+                    <span class="notification-text"> see all your new notifications here</span>
+                </div>
+                
+                <div class=" noti-detail">
+                    <div class="account-info noti-info">
+                    
+                        <div class="logo-container noti-container">
+                          <div class="nested-info">
+                            <span class="name noti">New order received! Check the 'Orders' section for details.</span>
+                            
+                          </div>
+                        </div>
+                    </div>
+                    <div class="account-details">
+                
+                        <div class=" noti-time">Just Now</div>
+                      </div>
+                </div>
+                <div class=" noti-detail">
+                    <div class="account-info noti-info">
+                    
+                        <div class=" noti-container">
+                          <div class="nested-info">
+                            <span class=" name noti">Scheduled system update in 1 hour.prepare for a brief downtime.</span>
+                            
+                          </div>
+                        </div>
+                    </div>
+                    <div class="account-details">
+                   
+                        <div class="noti-time">30 minutes ago</div>
+                      </div>
+                </div>
+                <div class=" noti-detail">
+                    <div class="account-info noti-info">
+                   
+                        <div class="logo-container noti-container">
+                          <div class="nested-info">
+                            <span class="name noti">Warning: Low inventory for product X. Consider restocking soon.</span>
+                            
+                          </div>
+                        </div>
+                    </div>
+                    <div class="account-details">
+                      
+                        <div class=" noti-time">1 hour ago</div>
+                      </div>
+                </div>
+                <div class=" noti-detail">
+                    <div class="account-info noti-info">
+                        
+                        <div class="logo-container noti-container">
+                          <div class="nested-info">
+                            <span class="name noti">User John Doe logged in. Last login: 10 minutes ago.</span>
+                            
+                          </div>
+                        </div>
+                    </div>
+                    <div class="account-details">
+                   
+                        <div class=" noti-time">2 hours ago</div>
+                      </div>
+                </div>
+
+            </div>
 
         </div>
 
-        <div class="card">
-
-        </div>
-
-        <div class="card">
-
-        </div>
-        
-      </main>
+        </main>
     </div>
-  </body>
-  <script src="app.js"></script>
+</body>
+<script src="app.js"></script>
+
 </html>
